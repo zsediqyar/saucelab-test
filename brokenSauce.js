@@ -32,6 +32,10 @@ describe('Broken Sauce', function () {
 
 
         let search = await driver.findElement(By.name("q"));
+            /* 
+            it was selecting the search field with wrong element name. The name on the file was "search"
+            which was throwing error. The name on page was "q" which I fixed it, and it works. 
+            */
         await search.sendKeys("Sauce Labs");
         
         let button = await driver.findElement(By.name("btnK"))
